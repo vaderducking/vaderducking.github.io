@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles-trivia.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            // Listen if user presses enter to check their answer
+            document.addEventListener('keydown', function() {
+                let key = event.key;
+                if (key == "Enter")
+                {
+                    var result = checkAnswer(event);
+                    return;
+                }
+            })
+
+            // Check the result of the 1st question
+            function checkButtonClicked(event) {
+
+                // Get the element which triggered the event
+                let button = event.target;
+
+                // Reset the color of buttons
+                var reset = resetButtons()
+
+                // Check if the element's inner HTML matches expected answer
+                if (button.id == "P") {
+                    button.style.backgroundColor = "green";
+                    document.querySelector('.result').innerHTML = 'Correct!';
+                }
+                else {
+                    button.style.backgroundColor = "red";
+                    document.querySelector('.result').innerHTML = 'Incorrect';
+            }}
+
+            // Check the answer of the 2nd question
+            function checkAnswer(event)
+            {
+                    // Define array of correct answers
+                    const correctAnswers = ["Los Angeles Lakers", "LA Lakers", "Lakers"];
+
+                    // Find the button that was clicked
+                    let buttonClicked = event.target;
+
+                    // Define the Input
+                    var answer = document.getElementById("UserInput").value;
+
+                    // Compare input with array of correct answers
+                    for (i = 0; i < correctAnswers.length; i++)
+                    {
+                        if (answer === correctAnswers[i])
+                        {
+                            // If correct answer, exit function
+                            document.getElementById("UserInput").style.backgroundColor = "green"
+                            // add text beneath the question that says "Correct!”.
+                            document.querySelector('.result2').innerHTML = 'Correct!';
+                            return;
+                        }
+                    }
+
+                    // Not a correct answer
+                    document.getElementById("UserInput").style.backgroundColor = "red"
+                    // add text beneath the question that says "Incorrect!”.
+                    document.querySelector('.result2').innerHTML = 'Incorrect!';
+            }
+
+            // A button has been clicked, reset the background of all
+            function resetButtons()
+            {
+                // remove color background for all buttons for better visibility
+                var collection = document.getElementById("Q1").children;
+
+                for (let i = 0; i < collection.length; i++) {
+                        collection[i].style.backgroundColor = "initial"
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital of France ?</h3>
+                <div id="Q1">
+                    <button id="R" onclick="checkButtonClicked(event)">Roubaix</button>
+                    <button id="M" onclick="checkButtonClicked(event)">Marseille</button>
+                    <button id="P" onclick="checkButtonClicked(event)">Paris</button>
+                    <button id="L" onclick="checkButtonClicked(event)">Lyon</button>
+                </div>
+                <p class="result"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which is the best NBA team of all time ?</h3>
+                <input type="text" id="UserInput">
+                <button id="check" onclick="checkAnswer(event)">Check Answer</button>
+                <p class="result2"></p>
+            </div>
+        </div>
+    </body>
+</html>

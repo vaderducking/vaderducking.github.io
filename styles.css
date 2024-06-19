@@ -1,0 +1,257 @@
+/* Define global variables */
+:root {
+    --white: #d7d7d7;
+    --yellow: #fcf09c;
+    --green: #C3D394;
+    --orange: #ffbb2a;
+    --red: #F45B69;
+    --blue: #7D70BA;
+    --grey: #292929;
+    --light-grey: #5D5D5D;
+    --black: #111111;
+    --border-width: 2px;
+    --border-radius: 5px;
+    --shadowHeight: 0.25em;
+    --background: rgb(33, 37, 41);
+}
+
+/* Top Header*/
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 27px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+/* Navbar */
+
+.navbar-brand,
+.nav-link {
+    color: var(--white) !important;
+    navbar-dark-hover-color: var(--light-grey);
+}
+
+
+/* Define body to dark-mode*/
+
+body {
+    background-color: var(--grey);
+    color: var(--white);
+    margin: 0;
+    text-align: center;
+}
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+/* Buttons Social Medias*/
+
+.social-icons {
+    font-size: 25px;
+    padding: 0.5rem 1.5rem 1rem 1.5rem;
+    margin: 0.5rem 1.5rem 1rem 1.5rem;
+    text-align: center;
+    box-shadow: 2px;
+
+}
+
+a:hover {
+    background-color: var(--light-grey);
+    transition: color 2s ease-in-out 0.15s ease-in-out;
+}
+
+.page {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    pagging: 1px;
+}
+
+/* Cards (or boxes with button on the bottom) */
+
+.card {
+    width: 16rem;
+    height: 15rem;
+    display: flex;
+    margin: 5px;
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+
+    border-color: var(--black);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-radius: var(--border-radius);
+    box-shadow: 0 var(--shadowHeight) 0 var(--black);
+}
+
+.card-img-top {
+    margin-top: 5px;
+
+}
+
+
+.racoon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.card-body {
+    font-size: large;
+    padding: 0px;
+    color: #FFF;
+    line-height: 1.2;
+}
+
+.card-footer {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    border: none;
+    background-color: var(--background);
+}
+
+.btn {
+    height: 2%;
+    width: 8rem;
+
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+
+    border-color: var(--black);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-radius: var(--border-radius);
+    box-shadow: 0 var(--shadowHeight) 0 var(--black);
+    transition-duration: 100ms;
+
+    animation-fill-mode: forwards;
+}
+
+.btn:hover {
+    transition-duration: 50ms;
+    box-shadow: 0 0 0 var(--grey);
+    transform: translateY(var(--shadowHeight));
+}
+
+
+hr {
+    padding: 0rem;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: var(--background);
+    color: var(--white);
+}
+
+#projectPageWindow {
+    width: auto;
+    height: auto;
+}
+
+/* Project content from iFrame */
+.projectContent {
+    padding: 0 5%;
+    width: auto;
+}
+
+#projectPageiFrame {
+    background-color: var(--grey);
+}
+
+.frame-img {
+    width: 90vw;
+    margin-bottom: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.title2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.1rem;
+}
+
+.logo-img {
+    width: 40vw;
+}
+
+.imagesRecover {
+    width: 100%;
+    display: flex;
+}
+
+
+
+
+/* Form elements in contactme.html - border shadow */
+
+.form-control {
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+
+    border-color: var(--black);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-radius: var(--border-radius);
+    box-shadow: 0 var(--shadowHeight) 0 var(--black);
+}
+
+
+video {
+    min-width: 100%;
+    height: auto;
+}
+
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 0px;
+
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: var(--border-width);
+}
+
+
+/* Old styles2.css */
+
+
+br {
+    display: block;
+    content: "";
+    margin-bottom: 1.5em;
+}
+

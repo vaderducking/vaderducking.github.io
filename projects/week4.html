@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!-- This is a comment -->
+
+<html lang="en">
+    <head>
+        <title>Week 4 - Memory</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css" rel="stylesheet">
+        <link href="../styles.css" rel="stylesheet">
+        <script src="../script.js"></script>
+    </head>
+
+    <body class="font-monospace">
+        <!-- -->
+        <div class="content">
+
+            <img src="../assets/week4-memory.png" class="logo-img" alt="...">
+
+            <h1 style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">Week 4 - Memory</h1>
+
+
+            <div class="projectContent" style="padding: 0 5%; width: auto;">
+                <p></p>
+
+                <br>
+
+                <p style="text-align: center; font-weight: bold;">
+                The themes for this week were:
+                </p>
+
+                <p style="text-align: center;">
+                    Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Overflow. File I/O. Images.
+                </p>
+                <br>
+                <p class="title2">Problem Set 1 - Filter (less)</p>
+                <p>Input an image and output the same image with a filter applied to it. There will be 4 filters to build:</p>
+                <img src="../assets/week4/week4_requirements_filter.PNG" class="frame-img" alt="...">
+                <!-- List of filters -->
+                <img src="../assets/week4/filter-less.PNG" class="frame-img" alt="...">
+                <div class="row mt-2">
+                    <p class="title2">Greyscale - Stadium</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Before</p>
+                        <img src="../assets/week4/before/stadium.bmp" class="align-middle" style="width: 75%;" alt="...">
+                    </div>
+                    <div class="col">
+                        <p>After</p>
+                        <img src="../assets/week4/after/g-stadium.bmp" class="align-middle" style="width: 75%;" alt="...">
+                    </div>
+                </div>
+
+
+                <div class="row mt-2">
+                    <p class="title2">Sepia - Courtyard</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Before</p>
+                        <img src="../assets/week4/before/courtyard.bmp" class="align-middle" style="width: 75%;" alt="...">
+                    </div>
+                    <div class="col">
+                        <p>After</p>
+                        <img src="../assets/week4/after/s-courtyard.bmp" class="align-middle" style="width: 75%;" alt="...">
+                    </div>
+                </div>
+
+
+                <div class="row mt-2">
+                    <p class="title2">Reflect - Tower</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Before</p>
+                        <img src="../assets/week4/before/tower.bmp" class="align-middle" style="width: 75%;" alt="...">
+                    </div>
+                    <div class="col">
+                        <p>After</p>
+                        <img src="../assets/week4/after/r-tower.bmp" class="align-middle" style="width: 75%;" alt="...">
+                    </div>
+                </div>
+
+
+                <div class="row mt-2">
+                    <p class="title2">Blur - Yard</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Before</p>
+                        <img src="../assets/week4/before/yard.bmp" class="align-middle" style="width: 75%;" alt="...">
+                    </div>
+                    <div class="col">
+                        <p>After</p>
+                        <img src="../assets/week4/after/b-yard.bmp" class="align-middle" style="width: 75%;" alt="...">
+                    </div>
+                </div>
+
+
+                <p class="title2">Problem Set 2 - Recover</p>
+                <p>Recover an image from being deleted by searching for signature patterns of JPEG files (starting with the first 3 bytes 0xff 0xd8 0xff and more options on the fourth byte).</p>
+                <img src="../assets/week4/week4_requirements_recover.PNG" class="frame-img" alt="...">
+                <p>Running this program allowed to recover 50 images from card.raw</p>
+
+
+                <!-- 50 images flex-->
+
+                <!-- Insert button that activates a JS function to flex display the 50 images from 000.jpg to 049.jpg -->
+
+
+                <input type="button" class="btn btn-secondary position-relative" onclick="displayImages()" style="width: 14rem;" value="Recover the pictures" />
+                <br>
+                <div class="imagesRecover">
+                    <div class="container" id="insertImages">
+                        
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </body>
+
+</html>
+
