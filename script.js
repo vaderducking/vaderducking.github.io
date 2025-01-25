@@ -1,11 +1,13 @@
 // List of functions
 
+// Get key pressed
+document.addEventListener('keydown', function(event) {
+  if (event.key == "Escape") {
+    CloseFloatingDiv();
+  }
+});
+
   function LightModeDenied(event) {
-
-
-    // Get the element which triggered the event
-    let input = event.target;
-    console.log(input);
 
     let status = document.getElementById("flexSwitchCheckReverse").status;
 
@@ -23,11 +25,8 @@
   }
 
     function ShowFloatingDiv(name) {
-
-
-      console.log(name)
       var weekInfo = document.getElementById("projectPageWindow");
-      console.log(weekInfo)
+
       weekInfo.style.display = "block";
       weekInfo.classList.add("openWindowAnimation");
       if (weekInfo.classList.contains("closeWindowAnimation"))

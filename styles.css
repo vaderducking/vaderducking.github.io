@@ -38,7 +38,6 @@ h4 {
 .navbar-brand,
 .nav-link {
     color: var(--white) !important;
-    navbar-dark-hover-color: var(--light-grey);
 }
 
 
@@ -80,7 +79,7 @@ a:hover {
 .page {
     margin-left: 0rem;
     margin-right: 0rem;
-    pagging: 1px;
+    padding: 1px;
 }
 
 /* Cards (or boxes with button on the bottom) */
@@ -143,6 +142,11 @@ a:hover {
     transition-duration: 100ms;
 
     animation-fill-mode: forwards;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
 }
 
 .btn:hover {
